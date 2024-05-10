@@ -30,3 +30,8 @@ The user constructs a message to sign, and the contract verifies the signature.
     - if valid:
         - will add the `permit_hash` to `permits`
         - add the allowance to the spender
+
+### How to test : 
+- Setup testing harness by following the instructions in the [contract dev environment](https://github.com/xian-network/contract-dev-environment)
+- Clone this repo to `contracts`
+- Run `pytest` in the root directory of the repo
