@@ -24,8 +24,9 @@ The user constructs a message to sign, and the contract verifies the signature.
     - construct the message like so : 
         - `msg = f"{owner}:{spender}:{value}:{deadline}:{ctx.this}"`
     - assert the deadline is greater than the current time.
-    - create a `permit_hash` using SHA3 hash of `msg` and store it in `permits[permit_hash]`, to prevent replays.
-    - assert `permit_hash` is None, if not, revert 
+    - construct a `permit_hash` using SHA3 hash of `msg`.
+    - assert `permit_hash` is None, if not, revert
+    - store `permit_hash` in `permits[permit_hash]`, to prevent replays
     - call `verify(msg, signature)`
     - if valid:
         - will add the `permit_hash` to `permits`
