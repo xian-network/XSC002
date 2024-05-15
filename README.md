@@ -1,4 +1,4 @@
-# XST002 // Permit
+# XSC002 // Permit
 
 - An adaptation of [EIP-2612](https://eips.ethereum.org/EIPS/eip-2612) for Xian.
 - Allows for a user to grant a spender a certain amount of tokens to spend on their behalf, without having to submit a transaction to the network.
